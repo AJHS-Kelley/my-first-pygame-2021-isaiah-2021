@@ -42,7 +42,7 @@ pygame.draw.line(windowSurface, RED,(0,60), (120, 0), 1)
 pygame.draw.circle(windowSurface, BLACK, (300, 50), 20, 0)
 
 #Draw an ellipse
-pygame.draw.ellipse(windowSurface, RED, (300, 50), 20, 0)
+pygame.draw.ellipse(windowSurface, RED, (300, 250, 40, 80), 1)
 
 #Draw the text rectangle
 pygame.draw.rect(windowSurface, RED,(textRect.left - 20, textRect.top - 20, textRect.width + 40, textRect.height + 40))
