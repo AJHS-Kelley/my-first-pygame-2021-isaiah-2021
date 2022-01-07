@@ -36,3 +36,14 @@ moveDown = False
 
 MOVESPEED = 6
 
+# Run the game loop.
+while True:
+    # Check for events.
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+        if  event.type == KEYDOWN:
+            # Change the keyboard variables.
+            if event.key == K_LEFT or event.key == K_d:
+
