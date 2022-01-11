@@ -1,7 +1,7 @@
-# Pygame Collision Dection Practice, Isaiah Wright, January 07, 2022, 2:00pm
+# Pygame Collision Dection Practice, Isaiah Wright, January 11, 2022, 2:18pm
 
 import pygame, sys, random
-from pygame.locals import 
+from pygame.locals import
 
 # Setup Pygame
 pygame.init()
@@ -45,5 +45,16 @@ while True:
             sys.exit()
         if  event.type == KEYDOWN:
             # Change the keyboard variables.
-            if event.key == K_LEFT or event.key == K_d:
+            if event.key == K_LEFT or event.key == K_a:
+                moveRight = False
+                moveLeft = True
+            if event.key == K_RIGHT or event.key ==K_d:
+                moveLeft = False 
+                moveRight = True
+            if event.key == K_UP or event.key == K_w:
+                moveDown = False 
+                moveUP = True
+            if event.key == K_DOWN or event.key == K_s:
+                moveUp = False
+                moveDown = True            
 
