@@ -1,7 +1,7 @@
 # My First PyGame, Isaiah Wright, 11/29/21 2:28pm, v0.0
 
 import pygame, sys
-from pygame import pixelarray
+
 from pygame.locals import *
 # start PyGame
 pygame.init()
