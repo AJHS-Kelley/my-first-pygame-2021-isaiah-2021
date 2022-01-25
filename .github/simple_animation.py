@@ -57,4 +57,6 @@ while True:
             b['rect'].left += MOVESPEED
             b['rect'].top -= MOVESPEED          
 
-
+        if b['react'].top < 0:
+            # The box has moved part past top 
+            if b['dir']
