@@ -69,7 +69,7 @@ while True:
                     b['dir'] = UPLEFT 
                 if b['dir'] == DOWNRIGHT:
                     b['dir'] = UPRIGHT
-            if b['rect'].left < 0
+            if b['rect'].left < 0:
                # The box has moved past the left.
                if b['dir'] == DOWNLEFT:
                    b['dir'] = DOWNRIGHT
@@ -88,6 +88,6 @@ while True:
     # Draw the window to the screen.
     pygame.display.update()
     time.sleep(0.02)
-    
-                    
+
+
 

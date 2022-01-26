@@ -72,4 +72,18 @@ while True:
                 moveDown = False 
             if event.key == K_x: # Use x to teleport the player. 
                 player.top = random.randint(0, WINDOWHEIGHT - player.height)
-                player.left = random.randint(0, WINDOWWIDTH -player.width)           
+                player.left = random.randint(0, WINDOWWIDTH -player.width) 
+
+        if event.type == MOUSEBUTTONUP:
+            foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE))        
+    foodCounter += 1
+    if foodCounter => NEWFOOD:
+        # Add new food
+        foodCounter = 0
+        foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE),FOODSIZE, FOODSIZE))
+
+    # Draw while background on Window Surface.
+    windowSurface.fill(WHITE)             
+
+
+ 
