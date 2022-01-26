@@ -107,8 +107,8 @@ while True:
     # Draw the food.
      for i in range(len(foods)):
          pygame.draw.rect(windowSurface, GREEN, foods[i])  
-         
-              
+
+
 
 
 
