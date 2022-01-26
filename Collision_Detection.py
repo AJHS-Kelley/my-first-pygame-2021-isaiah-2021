@@ -75,7 +75,8 @@ while True:
                 player.left = random.randint(0, WINDOWWIDTH -player.width) 
 
         if event.type == MOUSEBUTTONUP:
-            foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE))        
+            foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE))
+
     foodCounter += 1
     if foodCounter => NEWFOOD:
         # Add new food
@@ -83,7 +84,19 @@ while True:
         foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE),FOODSIZE, FOODSIZE))
 
     # Draw while background on Window Surface.
-    windowSurface.fill(WHITE)             
+    windowSurface.fill(WHITE)
+
+    # move the player.
+    if moveDown and player.bottom < WINDOWHEIGHT:
+        player.top += MOVESPEED
+    if moveUp and player.top > 0:
+        player.top -= MOVESPEED
+    if moveLeft and player.left > 0:
+        player.left -= MOVESPEED
+    if moveRight and player.right < WINDOWWIDTH:
+        player.right += MOVESPEED
+                
+
 
 
  
