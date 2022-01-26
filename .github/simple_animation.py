@@ -82,3 +82,12 @@ while True:
                 if b['dir'] == UPRIGHT:
                     d['dir'] = UPLEFT
 
+        # Draw the box onto the game surface.
+        pygame.draw.rect(windowSurface, b['color'], b['rect'])
+
+    # Draw the window to the screen.
+    pygame.display.update()
+    time.sleep(0.02)
+    
+                    
+
