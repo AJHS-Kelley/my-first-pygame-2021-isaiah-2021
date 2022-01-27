@@ -106,7 +106,11 @@ while True:
 
     # Draw the food.
      for i in range(len(foods)):
-         pygame.draw.rect(windowSurface, GREEN, foods[i])  
+         pygame.draw.rect(windowSurface, GREEN, foods[i]) 
+
+    # Draw the window to the screen
+    pygame.display.update()
+    mainClock.tick(40)      
 
 
 
