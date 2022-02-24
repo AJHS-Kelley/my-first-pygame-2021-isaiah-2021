@@ -1,7 +1,8 @@
 # Pygame Collision Dection Practice, Isaiah Wright, January 11, 2022, 2:18pm
+# Please review my added comments and fix the issues.  Thank you! - Mr. Kelley 
 
 import pygame, sys, random
-from pygame.locals import
+from pygame.locals import # add an * after import 
 
 # Setup Pygame
 pygame.init()
@@ -26,8 +27,8 @@ player = pygame.Rect(300, 100, 50, 50)
 foods = []
 
 for i in range(20):
-    foods.append(pygame.Rect(rabdom.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE))
-
+    foods.append(pygame.Rect(rabdom.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE)) 
+                            # Typo above, should be random. )
 # Movement Variables 
 moveLeft = False
 moveRight = False
@@ -78,7 +79,7 @@ while True:
             foods.append(pygame.Rect(event.pos[0], event.pos[1]), FOODSIZE, FOODSIZE))
 
     foodCounter += 1
-    if foodCounter => NEWFOOD:
+    if foodCounter => NEWFOOD: # Should be >= 
         # Add new food
         foodCounter = 0
         foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE),FOODSIZE, FOODSIZE))
@@ -105,8 +106,8 @@ while True:
             foods.remove(food)
 
     # Draw the food.
-     for i in range(len(foods)):
-         pygame.draw.rect(windowSurface, GREEN, foods[i]) 
+     for i in range(len(foods)): # Move line one space to the right. 
+         pygame.draw.rect(windowSurface, GREEN, foods[i]) # Move line one space to the right. 
 
     # Draw the window to the screen
     pygame.display.update()
